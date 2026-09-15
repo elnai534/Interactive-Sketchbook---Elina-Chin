@@ -1,0 +1,42 @@
+body {
+  margin: 0;
+  background-color: #faf9f5;
+  color: #26241c;
+  font-family: Arial, sans-serif;
+  font-size: 17px;
+  line-height: 1.6;
+}
+
+main,
+footer {
+  max-width: 900px;
+  margin: auto;
+  padding: 24px;
+}
+
+section {
+  margin-bottom: 32px;
+  padding-bottom: 24px;
+  border-bottom: 1px solid #cccccc;
+}
+
+h1 {
+  font-size: 36px;
+}
+
+h2 {
+  font-size: 26px;
+}
+
+h3 {
+  margin-bottom: 8px;
+}
+
+a {
+  color: #26241c;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
