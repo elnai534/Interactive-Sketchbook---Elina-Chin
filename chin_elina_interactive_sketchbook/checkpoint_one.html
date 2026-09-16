@@ -31,7 +31,8 @@
         I am having an issue with the git commit where it is not letting me commit it - and I dont know why ;-;
       </p>
       <img src="img/github_commit_fail.png" alt="Screenshot showing the Git commit issue.">
-
+      <p><strong>UPDATE!!</strong></p><p> I figured out the issue! I accidentally initated git inside of page2, and it became its own repository. Therefore git was treating it as a submodule instead of a normal project file- so it was failing to commit.</p>
+      <p><strong>solution</strong></p><p>i fixed it by removing the hidden .git folder inside of page2 folder - and that removed its own repository. after that i reinitialized git properly and i could commit successfully. yay!</p>
       <h2>Planning site</h2>
 
       <p>
