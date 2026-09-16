@@ -1,0 +1,18 @@
+body {
+  background-color: #1695A3;
+    color: #FFFFFF;
+}
+p {
+  color: #EB7F00;
+  font-size: 40px;
+  font-weight: bold;
+}
+h3 {
+    text-align: center;
+}
+a {
+  text-decoration: none;
+}
+li {
+  color: blue;
+}
