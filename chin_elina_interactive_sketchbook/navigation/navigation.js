@@ -1,4 +1,5 @@
 // Open on hover or at the very top; stay compact elsewhere.
+// open on tap or keybaord focus
 (() => {
   const nav = document.querySelector('.portfolio-nav');
   if (!nav) return;
