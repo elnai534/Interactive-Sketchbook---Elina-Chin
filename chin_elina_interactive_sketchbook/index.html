@@ -7,6 +7,8 @@
     <title>Elina Chin — Entry Point</title>
 
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="navigation/navigation.css">
+    <script src="navigation/navigation.js" defer></script>
   </head>
 
   <body>
@@ -14,13 +16,16 @@
       <h1>Elina Chin</h1>
       <p>Module 5 — DES 228</p>
 
-      <nav>
-        <a href="../chin_elina_interactive_sketchbook/index.html">Home</a>
-        <a href="about/about.html">About</a>
-        <a href="inspiration/inspiration.html">Inspo</a>
-        <a href="hierarchy/hierarchy.html">Hierarchy</a>
-        <a href="css_practice/css_practice.html">CSS Practice</a>
-        <a href="checkpoint_one.html">Interactive Sketchbook</a>
+      <nav class="portfolio-nav is-open" aria-label="Main navigation">
+        <button class="portfolio-nav-toggle" type="button" aria-label="Open navigation" aria-expanded="true" aria-controls="portfolio-nav-links"></button>
+        <ul class="portfolio-nav-links" id="portfolio-nav-links">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about/about.html">About</a></li>
+          <li><a href="inspiration/inspiration.html">Inspo</a></li>
+          <li><a href="hierarchy/hierarchy.html">Hierarchy</a></li>
+          <li><a href="css_practice/css_practice.html">CSS Practice</a></li>
+          <li><a href="checkpoint_one.html">Interactive Sketchbook</a></li>
+        </ul>
       </nav>
     </header>
 

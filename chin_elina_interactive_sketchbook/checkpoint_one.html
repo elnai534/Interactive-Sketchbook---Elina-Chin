@@ -7,6 +7,8 @@
     <title>Interactive Sketchbook</title>
 
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="navigation/navigation.css">
+    <script src="navigation/navigation.js" defer></script>
   </head>
 
   <body>
@@ -14,13 +16,16 @@
       <h1>Elina Chin</h1>
       <p>Interactive Sketchbook</p>
 
-      <nav>
-        <a href="../chin_elina_interactive_sketchbook/index.html">Home</a>
-        <a href="about/about.html">About</a>
-        <a href="inspiration/inspiration.html">Inspo</a>
-        <a href="hierarchy/hierarchy.html">Hierarchy</a>
-        <a href="css_practice/css_practice.html">CSS Practice</a>
-        <a href="../chin_elina_interactive_sketchbook/checkpoint_one.html">Interactive Sketchbook</a>
+      <nav class="portfolio-nav is-open" aria-label="Main navigation">
+        <button class="portfolio-nav-toggle" type="button" aria-label="Open navigation" aria-expanded="true" aria-controls="portfolio-nav-links"></button>
+        <ul class="portfolio-nav-links" id="portfolio-nav-links">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about/about.html">About</a></li>
+          <li><a href="inspiration/inspiration.html">Inspo</a></li>
+          <li><a href="hierarchy/hierarchy.html">Hierarchy</a></li>
+          <li><a href="css_practice/css_practice.html">CSS Practice</a></li>
+          <li><a href="checkpoint_one.html">Interactive Sketchbook</a></li>
+        </ul>
       </nav>
     </header>
 
@@ -35,6 +40,14 @@
       <p><strong>solution</strong></p><p>i fixed it by removing the hidden .git folder inside of page2 folder - and that removed its own repository. after that i reinitialized git properly and i could commit successfully. yay!</p>
       <p>I added my previous reflections in this page below, and I could really tell the difference between the first entry and today's entry - I totally forgot to include p tags in the first entry. 
       </p>
+
+      <h3>09/16/2026</h3>
+      <p>I have updated the navigation. I used the navgiation from my portfolio that i previously created and adapted it with HTML, CSS and Javascript so that it works for this site. I had some trouble adaptiing it as it was not how it was originally designed; but i figured it out after a lot of trial and error. It was originally in React/next.js, and i also added a separate navigation folder as well.</p>
+      <img src="img/navigation folder.png" alt="Screenshot showing the updated navigation folder in tree.">
+      <img src="img/updated nav.png" alt="Screenshot showing the updated navigation code.">
+      <p>I feel like the updated navigation is much better integrated into the site and provides a better user experience - the previous navigation was honestly hard to read and differenciate. I intentionally made the navigation very different than a standard 'hamburger' menu - because I hate hambuerger menus ;-; -  I dont mind them in certain contexts - but personally I feel like they make websites harder to nagivation overall and take a lot more 'user effort' to navigate.</p>
+      
+      
       <h3> Previous Entries + Reflections</h3>
       <hr>
       <h4>Hierarchy: 08/27/2026</h4>
