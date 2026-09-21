@@ -15,8 +15,9 @@
     toggle.setAttribute('aria-expanded', String(open));
     links.inert = !open;
   }
+  //event listener: js: wait for mouse hover, click, keyboard focus, and scroll to update nav state
   nav.addEventListener('pointerenter', (event) => {
-    if (event.pointerType === 'mouse') { hovered = true; update(); }
+    if (event.pointerType === 'mouse') { hovered = true; update(); }// event pointer type === must equal the string 'mouse' for the hover to be true and update the nav state
   });
   nav.addEventListener('pointerleave', () => { hovered = false; update(); });
   toggle.addEventListener('click', () => {
