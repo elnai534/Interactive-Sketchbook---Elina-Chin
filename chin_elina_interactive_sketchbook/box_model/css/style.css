@@ -1,0 +1,52 @@
+/* first, let's follow best practices and cancel out default margins with the universal selector */
+* {
+
+}
+
+/* now we can control our margins ourselves, so lets give the body a 50px margin on the left and right; and a 25px margin on the top and bottom.
+
+can you write it in shorthand?*/
+
+body {
+}
+
+/* Find a custom font on Google Fonts and add it to the HTML head and your CSS: make sure you add the links and the font-family */
+
+/* Style the h1:
+   10px margin on the bottom
+   10px padding on the top and bottom
+   15px padding on the right and left
+   and a solid black border that is 1px thick
+   center the text and make it uppercase in CSS (do not retype it as uppercase in your HTML)
+   add a background color with 50% opacity
+*/
+h1 {
+   
+}
+
+h2 {
+   margin-top: 2.5%;
+   margin-bottom: 2.55%;
+}
+
+p {
+
+}
+
+code {
+
+
+}
+
+li {
+
+
+}
+
+a {
+
+}
+
+
+
+
