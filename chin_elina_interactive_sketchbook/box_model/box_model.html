@@ -4,10 +4,45 @@
 	    <meta charset="utf-8">
 	    <title>Box Model & Display</title>
 <!-- add link to stylesheet -->
+ <link rel="stylesheet" href="css/style.css">
 <!-- add custom font link from google fonts: hint this shoulb be a <link> -->
+ <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@600&family=Lato:wght@400;700&display=swap" rel="stylesheet">
+	<style>
+	li:where(.portfolio-nav *) {
+		background-color: transparent;
+		color: inherit;
+		border: none;
+		padding: 0;
+	}
+
+	a:where(.portfolio-nav *) {
+		background-color: transparent;
+		font-size: inherit;
+		color: inherit;
+		border: none;
+	}
+	</style>
+
+	<link rel="stylesheet" href="../navigation/navigation.css">
+	<script src="../navigation/navigation.js" defer></script>
 
 	</head>
 	<body>
+		<header>
+		<nav class="portfolio-nav is-open" aria-label="Main navigation">
+        <button class="portfolio-nav-toggle" type="button" aria-label="Open navigation" aria-expanded="true" aria-controls="portfolio-nav-links"></button>
+        <ul class="portfolio-nav-links" id="portfolio-nav-links">
+          <li><a href="../index.html">Home</a></li>
+          <li><a href="../about/about.html">About</a></li>
+          <li><a href="../inspiration/inspiration.html">Inspo</a></li>
+          <li><a href="../hierarchy/hierarchy.html">Hierarchy</a></li>
+          <li><a href="../css_practice/css_practice.html">CSS Practice</a></li>
+          <li><a href="../checkpoint_one.html">Interactive Sketchbook</a></li>
+		  <li><a href="../mid_century_modern_blog/index.html">Mid-Century Modern</a></li>
+		  <li><a href="box_model.html">Box Model</a></li>
+        </ul>
+      </nav>
+	</header>
 
 		<h1>Box Model & Display</h1>
 		<p>Every element on the page has its own box, which can be styled using CSS.</p>
@@ -48,13 +83,13 @@
 			<p class="blockTo">css</p>
 			<p class="blockTo">should</p>
 			<p class="blockTo">read:</p>
-			<p class="blockTo">display:?;</p>
+			<p class="blockTo">display:inline;</p>
 		<!-- write the correct display in the html and the css -->
 <br>
-			<a href="#">make</a>
-			<a href="#">me</a>
-			<a href="#">stack</a>
-			<a href="#">please</a>
+			<a href="#" class="stack">make</a>
+			<a href="#" class="stack">me</a>
+			<a href="#" class="stack">stack</a>
+			<a href="#" class="stack">please</a>
 
 
 	</body>
