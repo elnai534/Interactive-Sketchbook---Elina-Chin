@@ -66,29 +66,17 @@
         <h2 class="home-label">My experience</h2>
         <ul class="home-timeline">
           <li><h3>Lead UX/UI &amp;<br>Product Owner</h3><p>Alpha Hub · 2025 – Present</p><p class="home-small">Fintech · Design systems · Product strategy</p></li>
-          <li><h3>Frontend Developer</h3><p>CoCo Fresh Tea ·<br>2024 – 2025</p><p class="home-small">React · Research · Analytics</p></li>
-          <li><h3>Software Development Intern</h3><p>SphereWorx.io · 2024</p><p class="home-small">Product development</p></li>
         </ul>
       </section>
       <section class="home-card home-sketchbook">
         <h2 class="home-label">Interactive learning sketchbook</h2>
         <h3>A space to learn<br>by making.</h3>
         <p>Explore my DES 228 exercises, design inspiration, and reflections as I experiment with HTML, CSS, and visual communication.</p>
-        <ul class="home-pages">
-          <li><a href="checkpoint_one.html">Interactive Sketchbook <span aria-hidden="true">↗</span></a><span>Dated entries and reflections</span></li>
-          <li><a href="about/about.html">About <span aria-hidden="true">↗</span></a><span>Get to know me</span></li>
-          <li><a href="inspiration/inspiration.html">Inspo <span aria-hidden="true">↗</span></a><span>Designers who inspire me</span></li>
-          <li><a href="hierarchy/hierarchy.html">Hierarchy <span aria-hidden="true">↗</span></a><span>Typography and visual emphasis</span></li>
-          <li><a href="css_practice/css_practice.html">CSS Practice <span aria-hidden="true">↗</span></a><span>Experiments with page styling</span></li>
-          <li><a href="mid_century_modern_blog/index.html">Mid-Century Modern <span aria-hidden="true">↗</span></a><span>A blog layout exercise</span></li>
-          <li><a href="box_model/box_model.html">Box Model <span aria-hidden="true">↗</span></a><span>Spacing and display exercises</span></li>
-        </ul>
       </section>
       <section class="home-card home-stats">
         <h2 class="home-label">At a glance</h2>
         <p class="home-stat"><strong class="home-accent">60%</strong>increase in feature adoption</p>
         <p class="home-stat"><strong>40%</strong>faster design-to-development</p>
-        <div class="home-cert"><span class="home-accent" aria-hidden="true">♧</span><p>Google UX Design certified · IBM Enterprise Design Thinking</p></div>
       </section>
       <section class="home-card home-location">
         <h2 class="home-label"><span class="home-accent" aria-hidden="true">⌖</span> Based in</h2>
@@ -97,18 +85,66 @@
       </section>
       <section class="home-card home-process">
         <h2 class="home-label">How I work</h2>
-        <h3>01 Understand the problem</h3>
-        <p>I align on user needs, business goals, and product constraints through interviews, analytics, and collaborative discovery.</p>
-        <ol class="home-stages" aria-label="Design process"><li>Discover</li><li>Define</li><li>Design</li><li>Validate</li><li>Ship</li></ol>
-      </section>
-      <section class="home-card home-skills">
-        <div><h2 class="home-label">What I bring</h2><h3>Design craft with engineering fluency</h3></div>
-        <div class="home-skill"><span aria-hidden="true">♧</span><div><h4>Design</h4><p>Figma · Adobe CC · Prototyping</p></div></div>
-        <div class="home-skill"><span aria-hidden="true">&lt;/&gt;</span><div><h4>Build</h4><p>React · TypeScript · Tailwind CSS</p></div></div>
-        <div class="home-skill"><span aria-hidden="true">⌁</span><div><h4>Measure</h4><p>Google Analytics · Clarity · Testing</p></div></div>
+
+        <div id="process-content" aria-live="polite">
+          <h3>01 Understand the problem</h3>
+          <p>
+            I align on user needs, business goals, and product constraints
+            through interviews, analytics, and collaborative discovery.
+          </p>
+        </div>
+
+        <div class="process-options" role="group" aria-label="Design process">
+          <button type="button" aria-pressed="true">Discover</button>
+          <button type="button" aria-pressed="false">Define</button>
+          <button type="button" aria-pressed="false">Design</button>
+          <button type="button" aria-pressed="false">Validate</button>
+          <button type="button" aria-pressed="false">Ship</button>
+        </div>
       </section>
     </div>
   </main>
   <footer class="home-footer"><p>Elina Chin · Product designer &amp; frontend developer</p><a href="mailto:echin@sfsu.edu">echin@sfsu.edu</a></footer>
+  <script>
+  const processSteps = [
+  {
+    title: "01 Understand the problem",
+    text: "I start by understanding what people need, where they struggle, and what the product needs to achieve. Through user interviews, session recordings, heatmaps, and analytics, I look for patterns behind the friction. I work with stakeholders and engineering to clarify business goals, technical constraints, and assumptions before deciding what to solve."
+  },
+  {
+    title: "02 Define the direction",
+    text: "I turn research into a clear problem statement, prioritized requirements, and user flows that simplify complex tasks. Together with the team, I weigh user value, business impact, and development effort to define a practical scope. I establish what success should look like, whether that means easier task completion, stronger feature adoption, or fewer points of confusion."
+  },
+  {
+    title: "03 Explore and design",
+    text: "I explore different approaches through low-fidelity wireframes before developing detailed interfaces and interactive prototypes. Using reusable components, variants, and design tokens, I create consistent experiences that can grow with the product. I consider visual hierarchy, accessibility, responsive layouts, and loading, empty, and error states, while checking technical feasibility with developers early."
+  },
+  {
+    title: "04 Test and refine",
+    text: "I use usability testing, user feedback, and behavioral data to check whether the experience works as intended. I look for unclear interactions, unnecessary steps, and accessibility barriers, then prioritize improvements by their impact on users. By refining and testing again, I build evidence for design decisions and help the team resolve issues before they become costly to change."
+  },
+  {
+    title: "05 Build, launch, and improve",
+    text: "I connect design and development through clear specifications, documented interaction states, and close collaboration with engineering. When building interfaces, I focus on reusable components, semantic HTML, responsive behavior, and maintainable code. I review the implementation for usability and visual consistency, check key flows and edge cases, and use post-launch analytics and feedback to guide the next iteration."
+  }
+  ];
+
+  const processButtons = document.querySelectorAll(
+    ".process-options button"
+  );
+  const processHeading = document.querySelector("#process-content h3");
+  const processDescription = document.querySelector("#process-content p");
+
+  processButtons.forEach((button, index) => {
+    button.addEventListener("click", () => {
+      processHeading.textContent = processSteps[index].title;
+      processDescription.textContent = processSteps[index].text;
+
+      processButtons.forEach((item) => {
+        item.setAttribute("aria-pressed", String(item === button));
+      });
+    });
+  });
+</script>
 </body>
 </html>
