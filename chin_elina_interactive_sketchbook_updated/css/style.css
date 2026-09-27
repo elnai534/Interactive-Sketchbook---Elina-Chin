@@ -146,3 +146,37 @@ body.home-page { background: #f5f4f2; color: #151513; }
  .home-footer { flex-direction: column; gap: 12px; margin-top: 30px; }
  .home-footer::before { left: 20px; right: 20px; }
 }
+.home-hero h1 .home-greeting {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 0.16em;
+  margin-bottom: 0.12em;
+}
+
+.home-greeting > span {
+  white-space: nowrap;
+}
+
+.home-hero .home-portrait {
+  width: 1.4em;
+  height: 1.4em;
+  max-width: none;
+  flex-shrink: 0;
+  box-sizing: border-box;
+  object-fit: cover;
+  object-position: 45% 30%;
+  border: 2px solid white;
+  border-radius: 30%;
+}
+.home-hero h1 .home-role {
+  white-space: nowrap;
+}
+
+.home-hero h1 .home-role > span {
+  display: inline;
+}
+
+.home-black {
+  color: #151513;
+}
