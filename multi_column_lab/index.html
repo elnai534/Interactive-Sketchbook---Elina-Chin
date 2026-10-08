@@ -1,19 +1,48 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-	<meta charset="UTF-8">
-	<title>Multi Column Layout Lab</title>
-	<link rel="stylesheet" href="css/style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Multi-Column Flexbox Lab</title>
+
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="../navigation/navigation.css">
+  <script src="../navigation/navigation.js" defer></script>
 </head>
+
 <body>
-		<header>
-		  <h1>Fleetwood Mac -- Dont Stop</h1>
-		</header>
-			
-			<!-- #1 wrap the content with a div -->
-			<!-- #2 wrap the lyrics with a div -->
+  <nav class="portfolio-nav is-open" aria-label="Main navigation">
+    <button
+      class="portfolio-nav-toggle"
+      type="button"
+      aria-label="Open navigation"
+      aria-expanded="true"
+      aria-controls="portfolio-nav-links">
+    </button>
+
+    <ul class="portfolio-nav-links" id="portfolio-nav-links">
+      <li><a href="../index.html">Home</a></li>
+      <li><a href="../about/about.html">About</a></li>
+      <li><a href="../inspiration/inspiration.html">Inspo</a></li>
+      <li><a href="../hierarchy/hierarchy.html">Hierarchy</a></li>
+      <li><a href="../css_practice/css_practice.html">CSS Practice</a></li>
+      <li><a href="../checkpoint_one.html">Interactive Sketchbook</a></li>
+      <li><a href="../mid_century_modern_blog/index.html">Mid-Century Modern</a></li>
+      <li><a href="../box_model/box_model.html">Box Model</a></li>
+      <li><a href="index.html" aria-current="page">Multi-Column Lab</a></li>
+    </ul>
+  </nav>
+
+  <header>
+    <h1>Fleetwood Mac — Don't Stop</h1>
+  </header>
+
+  <main>
+    <div class="flex-container">
+      <div class="lyrics">
 		<h2>Lyrics</h2>
 		<!-- <br> -->
+		 <br>
 			  <p>If you wake up and don't want to smile<br>
 					If it takes just a little while<br>
 					Open your eyes and look at the day<br>
@@ -50,21 +79,38 @@
 					(Ooh) don't you look back<br>
 			  </p>
 
-			</div>
+			      </div>
 
-			<!-- #3 Wrap the album info with another div  -->
-		
-			  <h2>Album Info</h2><br>
-			<img src="img/rumours.jpg" alt="Rumours Album Cover">
-			  <p id="info">Rumours is the eleventh studio album by<br> British-American rock band Fleetwood Mac<br>but only the second with Buckingham & Nicks</p>
-			  <ul>
-			  	<li><strong>Album:</strong> Rumours</li>
-			  	<li><strong>Release Date:</strong> February 4, 1977</li>
-			  </ul>
+      <div class="album-info">
+        <h2>Album Info</h2>
 
-		
-		<footer>
-		  <h2>lyrics and music by Christine McVie</h2>
-		</footer>
+        <img
+          src="img/rumours.jpg"
+          alt="Fleetwood Mac's Rumours album cover, featuring two figures against a cream background">
+
+        <p id="info">
+          Rumours is the eleventh studio album by
+          British-American rock band Fleetwood Mac,
+          but only the second with Buckingham &amp; Nicks.
+        </p>
+
+        <ul>
+          <li><strong>Album:</strong> Rumours</li>
+          <li><strong>Release Date:</strong> February 4, 1977</li>
+        </ul>
+      </div>
+    </div>
+
+    <section class="reflection">
+      <h2>Process Reflection</h2>
+
+      <!-- Add your approximately 200-word reflection here using <p> tags. -->
+
+    </section>
+  </main>
+
+  <footer>
+    <p>Lyrics and music by Christine McVie</p>
+  </footer>
 </body>
 </html>
