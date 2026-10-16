@@ -1,42 +1,73 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-	<meta charset="UTF-8">
-	<title>Flex your Flexbox</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Three-Column Flexbox Lab</title>
 
-	<link rel="stylesheet" href="css/style.css">
-	<link rel="stylesheet" href="https://use.typekit.net/azk2aca.css">
+  <link rel="stylesheet" href="https://use.typekit.net/azk2aca.css">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="../navigation/navigation.css">
+  <script src="../navigation/navigation.js" defer></script>
 </head>
-<body>
 
-	<header>
-		<img id="logo" src="img/redSlow.gif">
-		<h1>FlexyFlexbox</h1>
-		<nav>
-			<a href="#">home</a>
-			<a href="#">about</a>
-			<a href="#">portfolio</a>
-		</nav>
-	</header>
+<body>
+  <nav class="portfolio-nav is-open" >
+    <button
+      class="portfolio-nav-toggle"
+      type="button">
+    </button>
+
+    <ul class="portfolio-nav-links" id="portfolio-nav-links">
+      <li><a href="../index.html">Home</a></li>
+      <li><a href="../about/about.html">About</a></li>
+      <li><a href="../inspiration/inspiration.html">Inspo</a></li>
+      <li><a href="../hierarchy/hierarchy.html">Hierarchy</a></li>
+      <li><a href="../css_practice/css_practice.html">CSS Practice</a></li>
+      <li><a href="../checkpoint_one.html">Interactive Sketchbook</a></li>
+      <li><a href="../mid_century_modern_blog/index.html">Mid-Century Modern</a></li>
+      <li><a href="../box_model/box_model.html">Box Model</a></li>
+      <li><a href="../multi_column_lab/index.html">Multi-Column Lab</a></li>
+      <li><a href="index.html" aria-current="page">Three-Column Lab</a></li>
+    </ul>
+  </nav>
+
+  <header class="lab-header">
+    <img id="logo" src="img/redSlow.gif" alt="Animated red FlexyFlexbox logo">
+
+    <h1>FlexyFlexbox</h1>
+
+    <nav class="lab-nav" >
+      <a aria-disabled="true">home</a>
+      <a aria-disabled="true">about</a>
+      <a aria-disabled="true">portfolio</a>
+    </nav>
+  </header>
+
+  <main>
 
 	<div class="didactic">Let's turn the <code>&lt;section&gt;</code> (parent container) into a flex-container, and make three equal columns from the <code>&lt;article&gt;</code> (child) containers</div>
 
-	<section>
-			<article>
-				<h2>1</h2>
-				
-				<h3>cats</h3>
-				<img class="articleImg" alt="" src="img/cat.png">
+	<section class="columns">
+		<article>
+			<p class="article-number">1</p>
+				<h2>cats</h2>
+				<img
+				class="articleImg"
+				src="img/cat.png"
+				alt="Cartoon calico cat sitting beside a bowl with a fish bone in it.">
 				<p>Eat half my food and ask for more fall asleep on the washing machine
 					Hide at bottom of staircase to trip human run at 3am. Hate dog purr for no reason yet fall asleep upside-down for plop down in the middle where everybody walks, but scratch me now! stop scratching me! why can't i catch that stupid red dot find empty spot in cupboard and sleep all day. Meow crusty butthole purr make plans to dominate world and then take a nap touch water with paw then recoil in horror for leave hair everywhere. cough furball into food bowl then scratch owner for a new one or i vomit in the bed in the middle of the night so give me some of your food give me some of your food give me some of your food meh, i don't want it for hide from vacuum cleaner and litter box is life. Poop on floor and watch human clean up refuse to leave cardboard box. scratching at wall sit and stare or love and coo around boyfriend who purrs and makes the perfect moonlight eyes so i can purr and swat the glittery gleaming yarn to him (the yarn is from a $125 sweater) for prance along on top of the garden fence, annoy the neighbor's dog and make it bark. </p>
 				
 			</article>
 
 			<article>
-				<h2>2</h2>
-			
-				<h3>pirates</h3>
-				<img class="articleImg" alt=""  src="img/pirate.png">
+				<p class="article-number">2</p>
+				<h2>pirates</h2>
+				<img
+				class="articleImg"
+				src="img/pirate.png"
+				alt="Cartoon pirate wearing a hat and holding a raised sword">
 				<p>Nipper me Privateer to go on account walk the plank cackle fruit careen topsail Barbary Coast Plate Fleet. Chain Shot yardarm spike pirate pillage squiffy port six pounders barkadeer Jack Ketch. Ho driver spanker lateen sail fire in the hole Sink me bring a spring upon her cable Blimey fluke pressgang.
 				Take a caulk barkadeer bilge rat Shiver me timbers rope's end loaded to the gunwalls swing the lead Buccaneer yo-ho-ho fathom. Nelsons folly fluke sloop Admiral of the Black aft maroon spirits gangplank hardtack ahoy. Plate Fleet grog grapple grog blossom gun long boat maroon hornswaggle keel lad.
 				
@@ -45,10 +76,12 @@
 			</article>
 
 			<article>
-				<h2>3</h2>
-			
-				<h3>cheese</h3>
-				<img class="articleImg" alt=""  src="img/cheese.png">
+				<p class="article-number">3</p>
+				<h2>cheese</h2>
+				<img
+				class="articleImg"
+				src="img/cheese.png"
+				alt="Cartoon cheese triangle playing tennis.">
 				<p>Boursin roquefort lancashire. Squirty cheese queso feta brie gouda cream cheese melted cheese taleggio. Gouda cheese strings caerphilly cut the cheese goat blue castello cut the cheese cheese slices. Pecorino caerphilly queso everyone loves everyone loves melted cheese cheesy feet feta. Airedale cheese and wine say cheese.
 
 				Lancashire parmesan fromage frais. Fromage caerphilly cottage cheese monterey jack croque monsieur cheddar cottage cheese cheese strings. Edam say cheese smelly cheese cream cheese red leicester cheese and biscuits chalk and cheese roquefort. Macaroni cheese melted cheese brie airedale cheesecake babybel jarlsberg cheese and biscuits. Who moved my cheese emmental caerphilly cheddar.
@@ -59,11 +92,26 @@
 
 			</section>
 
+			<section class="reflection">
+			<h2>Process Reflection</h2>
+
+			<p>
+				This assignment connected to the previous two-column lab, but this
+				time Flexbox controlled several parts of the page I made the header,
+				navigation, and article section flex containers. Seeing the structure was helped me understand how the navigation could be a child of the header and also a parent to its own links.
+				I used percentage widths to divide the space,this connected back to
+				margin and padding again, and adding space affects how much room is available for the content.
+				I had a missing article tag that made it so that the column was not dsplaying correclty for the cat. I feel like the images was the hardest part of the assignment for me as they were all different widths so you cant just give them the same width.
+				I used object-fit: contain to make sure the images were all the same size and lined up with the text below them. I also used flex-wrap to make sure that when the browser window was smaller, the columns would stack on top of each other instead of being squished together.
+				Going forwards, I could use this structure to display my Sketchbook assignments
+				as cards/boxes. 
+			</p>
+			</section>
+		</main>
+
+		<footer class="lab-footer">
+			<p>FlexyFooter</p>
+		</footer>
+		</body>
+		</html>
 			
-
-	<footer>
-		<h4>FlexyFooter</h4>
-	</footer>
-
-</body>
-</html>

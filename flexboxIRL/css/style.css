@@ -12,6 +12,8 @@ justify-content: start | end | center et al;
 
 /* 1. reset the margin and padding to 0 using the universal selector */
 * {
+	margin: 0;
+	padding: 0;
 	box-sizing: border-box;
 	/* let's come back to what box-sizing means - it will make more sense when we can visualize it. */
 }
@@ -28,13 +30,20 @@ body {
 
 header {
 	background-color: #F2F2F2;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+	align-items: center;
+	gap: 20px;
+	padding: 30px;
 }
 
 /* now we have a basic header set up, logo on the left, a title in the center and navigation on the right - so let's stylize a little further */
 
 #logo {
-	background-color: pink;
 	/* 3. adjust the width of the image until you are happy. you can play with margins and padding - leave the background color on to see how it affects its neighbors */
+	width: 100px;
+	height: auto;
 
 	/* background color is to show space taken up by element, delete when complete */
 }
@@ -45,33 +54,39 @@ h1 {
 	font-size: 48px;
 	text-align: center;
 	letter-spacing: .0125em;
-	background-color: orange;
 
 	/* 4. because the <h1> is a flex-item, or the child of a flex-container, we can use what is called align-self: self-end on the child, adjust it to center or the bottom */
+	align-self: center;
 
 	/* background color is to show space taken up by element, delete when complete */
 }
 
-nav {
-	background-color: yellow;
+.lab-nav {
 /* background color is to show space taken up by element, delete when complete */
 
 /* 5. the nav has child elements right? so therefor the nav can also be a flex-container as well. Lets do that now. */
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+	gap: 20px;
+	width: 35%;
 
 /* 6. just like we did for the h1 element, we can use what is called align-items here, so it matches the h1 tag 
 
 or, we can apply the align-items to the parent container and that will align everything
 */
+	align-items: center;
 }
 
-a {
+.lab-nav a {
 	text-decoration: none;
-	color: #F20505;
+	color: #A60303;
 	text-shadow: 1px 1px #0d0d0d;
 	font-size: 18px;
+	cursor: default;
 }
 
-a:hover {
+.lab-nav a:hover {
 	text-decoration: overline;
 	color: #0d0d0d;
 	text-shadow: -1px -1px #F20505;
@@ -92,6 +107,8 @@ a:hover {
 	font-size: 22px;
 	padding-top: 1.5%;
 	padding-bottom: 1.5%;
+	padding-left: 30px;
+	padding-right: 30px;
 }
 
 
@@ -105,49 +122,130 @@ code {
 
 /* -------section styles */
 
-section {
+.columns {
 	/*7. the section is yet another opportunity to set up a flex-container, let's do that.  */
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	justify-content: space-between;
+	row-gap: 30px;
+
 	/* 8. let's also set a right and left margin */
+	margin-left: 6%;
+	margin-right: 6%;
+	padding-top: 20px;
+	padding-bottom: 20px;
 }
 
 article {
-	border: 1px dashed yellow;
 	/* border is just to show space, be sure to delete it when complete */
 /*  9. let's set a width - remember that it will be a percentage of the parent container */
+	width: 29%;
 }
 
 p {
 	text-align: justify;
-	text-justify:inter-word;
+	text-justify: inter-word;
+	font-size: 18px;
+	line-height: 1.35;
 }
 
 .articleImg {
-background-color: antiquewhite;
-
-
 /*  10. let's set a width - remember that it will be a percentage of the parent container */
+	width: 100%;
+	display: block;
+	margin-bottom: 20px;
 }
 /* 11. okay, it is looking great, but how would we adjust so that the images are all the same size and the text lines up? */
+
+.articleImg {
+	aspect-ratio: 1 / 1;
+	object-fit: contain;
+}
 
 /*  now that we have a basic layout working we can adjust the articles as well. You can use this as a rough template for how to layout multi-columns for project one. 
 
 
 */
 
+.article-number {
+	margin-bottom: 10px;
+	font-size: 26px;
+	font-weight: bold;
+	text-align: center;
+}
+
+.columns h2 {
+	margin-bottom: 10px;
+	font-size: 20px;
+	text-align: center;
+}
+
+.reflection {
+	margin: 20px 6% 40px;
+}
+
+.reflection h2 {
+	margin-bottom: 15px;
+	font-size: 28px;
+}
+
+.reflection p {
+	margin-bottom: 15px;
+	text-align: left;
+	line-height: 1.5;
+}
+
+.reflection a {
+	color: #F2F2F2;
+	text-decoration: underline;
+}
+
+.reflection a:hover {
+	text-decoration-thickness: 2px;
+}
+
+.reflection a:focus-visible {
+	outline: 2px solid #F2F2F2;
+	outline-offset: 4px;
+}
+
 /* ------------------------------------------*/
 
 /* -------- footer styles ------------------- */
 
-h4 {
+footer p {
 	color: #730202;
 	text-shadow: 1px 1px #0d0d0d;
 	font-size: 36px;
 	text-align: center;
+	font-weight: bold;
 	/* padding: ; */
 }
 
 footer {
 	background-color: #F2F2F2;
-	width: 100dvw;
+	width: 100%;
+	padding: 30px;
 
+}
+
+/* Smaller screens */
+@media (max-width: 700px) {
+	header {
+		justify-content: center;
+	}
+
+	h1 {
+		font-size: 36px;
+	}
+
+	.lab-nav {
+		width: 100%;
+		justify-content: space-around;
+	}
+
+	article {
+		width: 100%;
+	}
 }
