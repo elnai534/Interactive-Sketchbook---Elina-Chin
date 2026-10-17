@@ -72,3 +72,157 @@ body { padding-top: 104px; }
 @media (prefers-reduced-motion: reduce) {
   .portfolio-nav, .portfolio-nav .portfolio-nav-links { transition: none; }
 }
+/* Step Five: shared colors and grouped assignment navigation */
+.portfolio-nav {
+  background: #ffffff;
+  color: #151513;
+  border: 2px solid #4285F4;
+}
+
+.portfolio-nav.is-open {
+  width: 760px;
+}
+
+.portfolio-nav .portfolio-nav-toggle {
+  color: #151513;
+  font: inherit;
+}
+
+.portfolio-nav .portfolio-nav-links {
+  gap: 4px 24px;
+}
+
+/* Reset inherited lab styles inside the shared navigation. */
+.portfolio-nav li,
+.portfolio-nav a,
+.portfolio-nav summary {
+  font-family: Arial, sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1.4;
+  letter-spacing: normal;
+  text-transform: none;
+  text-shadow: none;
+}
+
+.portfolio-nav .portfolio-nav-links > li > a,
+.portfolio-nav summary {
+  padding: 10px 0;
+  color: #151513;
+}
+
+.portfolio-nav .portfolio-nav-links > li:nth-child(1) > a {
+  border-bottom: 3px solid #4285F4;
+}
+
+.portfolio-nav .portfolio-nav-links > li:nth-child(2) > a {
+  border-bottom: 3px solid #EA4335;
+}
+
+.portfolio-nav .portfolio-nav-links > li:nth-child(3) > a {
+  border-bottom: 3px solid #FBBC05;
+}
+
+.portfolio-nav .portfolio-nav-links > li:nth-child(4) > a {
+  border-bottom: 3px solid #34A853;
+}
+
+.portfolio-nav .assignments-menu {
+  position: relative;
+}
+
+.portfolio-nav summary {
+  cursor: pointer;
+}
+/* Assignments dropdown: a separate floating card below the navbar. */
+.portfolio-nav .assignment-links {
+  position: absolute;
+  top: calc(100% + 24px);
+  right: 0;
+  width: 280px;
+  max-width: calc(100vw - 48px);
+  margin: 0;
+  padding: 12px;
+  list-style: none;
+  border: 1px solid #e5e5e5;
+  border-radius: 22px;
+  background: #ffffff;
+  box-shadow:
+    0 16px 40px rgb(0 0 0 / 14%),
+    0 4px 12px rgb(0 0 0 / 5%);
+  z-index: 1001;
+}
+
+/* Small pointer connects the dropdown visually to Assignments. */
+.portfolio-nav .assignment-links::before {
+  content: "";
+  position: absolute;
+  top: -7px;
+  right: 32px;
+  width: 12px;
+  height: 12px;
+  background: #ffffff;
+  border-top: 1px solid #e5e5e5;
+  border-left: 1px solid #e5e5e5;
+  transform: rotate(45deg);
+}
+
+.portfolio-nav .assignment-links li {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  background: transparent;
+}
+
+.portfolio-nav .assignment-links li + li {
+  margin-top: 5px;
+}
+
+.portfolio-nav .assignment-links a {
+  display: block;
+  padding: 13px 16px;
+  border: 0;
+  border-left: 4px solid #4285F4;
+  border-radius: 12px;
+  background: #f7f8fa;
+  color: #151513;
+  font-size: 15px;
+  font-weight: 500;
+  line-height: 1.4;
+  text-decoration: none;
+  white-space: normal;
+}
+
+.portfolio-nav .assignment-links li:nth-child(4n + 2) a {
+  border-left-color: #EA4335;
+}
+
+.portfolio-nav .assignment-links li:nth-child(4n + 3) a {
+  border-left-color: #FBBC05;
+}
+
+.portfolio-nav .assignment-links li:nth-child(4n + 4) a {
+  border-left-color: #34A853;
+}
+
+.portfolio-nav .assignment-links a:hover {
+  background: #eaf1fe;
+  color: #151513;
+  text-decoration: none;
+}
+
+.portfolio-nav a:focus-visible,
+.portfolio-nav summary:focus-visible,
+.portfolio-nav button:focus-visible {
+  outline: 2px solid #151513;
+  outline-offset: 4px;
+}
+
+@media (max-width: 600px) {
+  .portfolio-nav .portfolio-nav-links {
+    column-gap: 16px;
+  }
+}
+.portfolio-nav .assignment-links a:hover {
+  text-decoration: none;
+}
