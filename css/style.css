@@ -672,3 +672,48 @@ body.core-page {
   flex: 0 0 100%;
   margin: 0;
 }
+/* October 16: full-width paragraphs arranged vertically. */
+.sketchbook-page .process-entry.revision-entry {
+  flex-direction: column;
+  align-items: stretch;
+}
+
+.sketchbook-page .revision-entry > h2,
+.sketchbook-page .revision-entry > p {
+  flex: none;
+  width: 100%;
+  margin: 0;
+}
+
+/* Keep the before and after images together on one row. */
+.sketchbook-page .revision-entry .image-comparison {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  flex: none;
+  align-items: flex-start;
+  gap: 20px;
+  width: 100%;
+}
+
+.sketchbook-page .revision-entry .image-comparison figure {
+  flex: 1 1 0;
+  min-width: 0;
+  margin: 0;
+}
+
+.sketchbook-page .revision-entry .image-comparison figcaption {
+  margin-bottom: 10px;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.sketchbook-page .revision-entry .image-comparison img {
+  display: block;
+  width: 100%;
+  max-width: 100%;
+  height: auto;
+  max-height: none;
+  margin: 0;
+  border-radius: 12px;
+}
