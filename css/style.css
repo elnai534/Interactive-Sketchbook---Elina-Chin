@@ -609,3 +609,66 @@ body.core-page {
     padding: 20px;
   }
 }
+/* Sketchbook: smaller screenshots that do not stretch to fill space. */
+.sketchbook-page .process-entry img {
+  width: 320px;
+  max-width: 100%;
+  height: auto;
+  max-height: 220px;
+  object-fit: contain;
+  object-position: left top;
+  border-radius: 10px;
+}
+
+/* Screenshots directly inside an entry should not grow. */
+.sketchbook-page .process-entry > img {
+  flex: 0 1 320px;
+  min-width: 0;
+  align-self: flex-start;
+}
+
+/* Screenshots inside paragraphs also stay compact. */
+.sketchbook-page .process-entry p img {
+  display: block;
+  margin-top: 16px;
+  margin-bottom: 16px;
+}
+
+/* September 16: text and folder screenshot share the top row. */
+.sketchbook-page .navigation-entry .entry-row {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  gap: 24px;
+  width: 100%;
+}
+
+.sketchbook-page .navigation-entry .entry-row > p {
+  flex: 1 1 320px;
+  min-width: 0;
+  margin: 0;
+}
+
+.sketchbook-page .navigation-entry .entry-row > img {
+  flex: 0 1 280px;
+  width: 280px;
+  min-width: 0;
+  margin: 0;
+}
+
+/* The code screenshot occupies its own row below the introduction. */
+.sketchbook-page .navigation-entry > .navigation-code {
+  flex: 0 1 auto;
+  width: 100%;
+  max-width: 760px;
+  height: auto;
+  max-height: 180px;
+  margin: 0 auto;
+  object-position: center;
+}
+
+/* The concluding reflection sits below the code screenshot. */
+.sketchbook-page .navigation-entry > p {
+  flex: 0 0 100%;
+  margin: 0;
+}
