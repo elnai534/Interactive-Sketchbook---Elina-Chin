@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>positioning elements</title>
+    <link rel="stylesheet" href="https://use.typekit.net/azk2aca.css">
+    <link rel="stylesheet" href="css/main.css">
+</head>
+<body>
+
+  <header>
+  	<h1>positioning elements</h1>
+  </header>
+  <section>
+    <h3>Static</h3><p>default, as-is behavior</p>
+    <h3>Relative</h3><p>this positions a child relative to its parent. by giving an element a relative position, we can place it outside the normal flow of where it would be- but it still impacts other elements</p>
+    <h3>Absolute</h3><p>this takes the element out of the line up and no longer impacts elements around it, BUT you have to apply position:relative to a parent container
+      </p>
+    <h3>Fixed</h3><p>positioned in relation to the browser window, it just stays put!</p>
+    <h3>***Sticky***</h3><p>this one is a little more advanced, and we won’t get into it yet, but perhaps challenge yourself and your project to see if you can figure it out?</p><br>
+    <h3>Next up: z-index</h3><p>this is how we control layering when we are using positioning. if an element has a position, you can add a z-index, the larger the number the closer to the top.<br>
+    0=bottom 100=top<br>
+    think of z-index like the “bring to front” or “send to back” in design software.</p>
+    <br>
+    <p>for more information <a href="https://docs.google.com/presentation/d/1l5xqA2J6o3fNxPjc018LBTOWBgWTk6ssM02cNlLk4TU/edit?usp=sharing" target="_blank">click here</a></p>
+  </section>
+
+	<div class="overlay-wrapper">
+	  <img src="img/knollflower.gif" alt="knoll flower" />
+    <span class="dot"></span>
+    <span class="dot"></span>
+    <span class="dot"></span>
+    <span class="dot"></span>
+	</div>
+
+  <footer>
+    <a href="#">footer nav</a>
+    <h3>fix the footer to the bottom</h3>
+ 
+  </footer>
+  
+</body>
+</html>

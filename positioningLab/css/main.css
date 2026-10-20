@@ -1,0 +1,135 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  margin-left: 8%;
+  margin-right: 8%;
+}
+
+body {
+  font-family: "futura-pt", sans-serif;
+  background-color: #ECA75A;
+  width: 100%;
+  color: white;
+  text-shadow: 1px 1px black;
+  /* position: ; */
+  /* display: ; */
+  /* flex-direction: ; */
+  /* flex-wrap: ; */
+  /* align-items: ; */
+
+
+  /* now we can talk nuance in flexbox, by adding in align-items - justify-content wont work the same on a column, only a row*/
+}
+
+header {
+  /* align the text to the center*/ 
+  background-color: #39F7C5;
+  width: 100%;
+
+}
+
+h1 {
+  font-size: 7em; 
+}
+
+h2 {
+  font-size: 4em;
+}
+
+h3 {
+  font-size: 3em;
+}
+
+p {
+  color: black;
+  text-shadow: none;
+}
+
+a {
+  font-size: 3em;
+  color: black;
+  text-shadow: 1px 1px white;
+}
+
+a:hover {
+  font-size: 3.25em;
+  color: white;
+  text-shadow: 1px 1px black;
+  transition-duration: 500ms;
+}
+
+section {
+  background-color: rgba(255, 255, 255, .5);
+  width: 50%;
+  padding: 2.5%;
+
+}
+
+.overlay-wrapper {
+  width: 30%;
+  background-color: cyan;
+  /* background color is for box size reference only, delete it when done */
+
+  /* the class overlay-wrapper is a flex item from the parent flex container. But because it has nested elements it can also be a flex container too - let's give it the same rules as the body */
+}
+
+img {
+  width: 100%;
+  /* notice the width here, it says 100% right? well that is 100% of the parent container's width - which if we look up we can see that the .overlay-wrapper is set to 30% */
+  /* z-index: */
+}
+
+.dot {
+  display: block;
+  width: 300px;
+  height: 300px;
+  border-radius: 100%;
+
+  /* in order to draw  circle in css, creat a span and call it dot in html. then you must use the height/width border-radius and display in css */
+
+  background-color: rgba(255, 5, 5, .5);
+  border: 26px double #39F7C5;
+
+
+}
+
+
+footer {
+background-color: blue;
+color: white;
+text-shadow: 1px 1px black;
+/* let's push the text to the right */
+}
+
+
+/* ------------ custom styles ------------ */
+
+/* relative position */
+
+/* 1.Try Relative positioning the .dot with left: 200% and top: -500px */
+
+/* 2. Give the body a position: relative;
+Position is not automatically inherited, so in order to set an absolute postion on a child element, let's give the parent position: relative.
+
+/* 3. give the .overlay-wrapper a position: absolute; and let's try top 5% left -5% */
+
+/* 4. notice how our "dots" (.dot) move off the screen? that is because they are in direct relation to their parent container, so let's adjust those numbers, top: -250px;
+left: 200%; */
+
+
+/* 5. Try adding a fixed position to the footer with bottom 1%; and right 1% */
+
+/* 6. let's get rid of the background colors on the header, overlay-wrapper and the footer */
+
+
+/* 7. Now try adding a Z-index to the elements: notice what happens when we try to disrupt the parent child relationship? How can we layer using z-index?*/
+
+/* z-index works with position, and the higher the z-index the closer to the top, if we have 6 elments on an index, 6 is on top and 1 is on the bottom. */
+
+/* 8. now, adjust the positioning on the section ensuring that it is readable and have some fun moving things around until you are happy. */
+
+
