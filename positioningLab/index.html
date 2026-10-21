@@ -8,8 +8,36 @@
     <title>positioning elements</title>
     <link rel="stylesheet" href="https://use.typekit.net/azk2aca.css">
     <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="../navigation/navigation.css">
+    <script src="../navigation/navigation.js" defer></script>
 </head>
 <body>
+  <nav class="portfolio-nav is-open">
+      <button class="portfolio-nav-toggle" type="button">Menu</button>
+
+      <ul class="portfolio-nav-links" id="portfolio-nav-links">
+        <li><a href="../index.html">Home</a></li>
+        <li><a href="../about/about.html">About</a></li>
+        <li><a href="../inspiration/inspiration.html">Inspiration</a></li>
+        <li><a href="../checkpoint_one.html">Sketchbook</a></li>
+
+        <li>
+          <details class="assignments-menu">
+            <summary>Assignments</summary>
+
+            <ul class="assignment-links">
+              <li><a href="../hierarchy/hierarchy.html">Hierarchy</a></li>
+              <li><a href="../css_practice/css_practice.html">CSS Practice</a></li>
+              <li><a href="../mid_century_modern_blog/index.html">Mid-Century Modern</a></li>
+              <li><a href="../box_model/box_model.html">Box Model</a></li>
+              <li><a href="../multi_column_lab/index.html">Multi-Column Lab</a></li>
+              <li><a href="../flexboxIRL/index.html">Three-Column Lab</a></li>
+              <li><a href="index.html">Positioning Lab</a></li>
+            </ul>
+          </details>
+        </li>
+      </ul>
+    </nav>
 
   <header>
   	<h1>positioning elements</h1>
@@ -35,6 +63,15 @@
     <span class="dot"></span>
     <span class="dot"></span>
 	</div>
+
+   <section class="reflection">
+    <h3>Reflection</h3>
+    <p>I feel like the absolute positioning made the most sense to me because the parent gives the element a clear reference point. For giving the body position: relative means the absolutely positioned overlay-wrapper uses it to work out where to sit. This connects back to the parent and child relationships from the Flexbox assignments and makes it more familiar !</p>
+    <p>I think the difference between relative and absolute positioning is that relative positioning moves an element from its normal position, but keeps its original space. Absolute positioning removes it from the normal flow, so the surrounding content does not make room for it. The circles use relative positioning inside the absolute wrapper, which made the difference easier to see.</p>
+    <p>The z-index was the most interesting part to me because it works like bringing something forward or sending it backwards in design software (layers). Layering the text above the shapes keeps it readable while still allowing the elements to overlap.</p>
+    <p>When i fixed the footer it keeps it in the same corner of the browser while scrolling. The layout needs space for it so it does not cover the last paragraph. The circle offsets also need adjusting after positioning their parent.</p>
+    <p>Going forwards, positioning could be useful for labels over my Sketchbook images. But i think I would still use Flexbox for the main layout, because too many positioned elements could overlap or become difficult to read on smaller screens.</p>
+  </section>
 
   <footer>
     <a href="#">footer nav</a>

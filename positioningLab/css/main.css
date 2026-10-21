@@ -15,11 +15,11 @@ body {
   width: 100%;
   color: white;
   text-shadow: 1px 1px black;
-  /* position: ; */
-  /* display: ; */
-  /* flex-direction: ; */
-  /* flex-wrap: ; */
-  /* align-items: ; */
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  align-items: center;
 
 
   /* now we can talk nuance in flexbox, by adding in align-items - justify-content wont work the same on a column, only a row*/
@@ -27,7 +27,9 @@ body {
 
 header {
   /* align the text to the center*/ 
-  background-color: #39F7C5;
+  text-align: center;
+  position: relative;
+  z-index: 3;
   width: 100%;
 
 }
@@ -66,12 +68,22 @@ section {
   background-color: rgba(255, 255, 255, .5);
   width: 50%;
   padding: 2.5%;
+  position: relative;
+  left: -8%;
+  margin-top: 40px;
+  z-index: 2;
 
 }
 
 .overlay-wrapper {
   width: 30%;
-  background-color: cyan;
+  position: absolute;
+  top: 5%;
+  left: -5%;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  align-items: center;
   /* background color is for box size reference only, delete it when done */
 
   /* the class overlay-wrapper is a flex item from the parent flex container. But because it has nested elements it can also be a flex container too - let's give it the same rules as the body */
@@ -80,7 +92,8 @@ section {
 img {
   width: 100%;
   /* notice the width here, it says 100% right? well that is 100% of the parent container's width - which if we look up we can see that the .overlay-wrapper is set to 30% */
-  /* z-index: */
+  position: relative;
+  z-index: 1;
 }
 
 .dot {
@@ -88,6 +101,11 @@ img {
   width: 300px;
   height: 300px;
   border-radius: 100%;
+  position: relative;
+  left: 200%;
+  top: -250px;
+  flex-shrink: 0;
+  z-index: 1;
 
   /* in order to draw  circle in css, creat a span and call it dot in html. then you must use the height/width border-radius and display in css */
 
@@ -99,7 +117,11 @@ img {
 
 
 footer {
-background-color: blue;
+position: fixed;
+bottom: 1%;
+right: 1%;
+z-index: 4;
+text-align: right;
 color: white;
 text-shadow: 1px 1px black;
 /* let's push the text to the right */
@@ -113,7 +135,7 @@ text-shadow: 1px 1px black;
 /* 1.Try Relative positioning the .dot with left: 200% and top: -500px */
 
 /* 2. Give the body a position: relative;
-Position is not automatically inherited, so in order to set an absolute postion on a child element, let's give the parent position: relative.
+Position is not automatically inherited, so in order to set an absolute postion on a child element, let's give the parent position: relative. */
 
 /* 3. give the .overlay-wrapper a position: absolute; and let's try top 5% left -5% */
 
@@ -133,3 +155,13 @@ left: 200%; */
 /* 8. now, adjust the positioning on the section ensuring that it is readable and have some fun moving things around until you are happy. */
 
 
+.reflection {
+  left: 0;
+  width: 80%;
+  margin-top: 400px;
+  margin-bottom: 180px;
+}
+
+.reflection p + p {
+  margin-top: 1em;
+}
