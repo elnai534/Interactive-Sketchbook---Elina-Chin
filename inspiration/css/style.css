@@ -68,3 +68,33 @@ body {
   border: 0;
   border-top: 2px solid #34A853;
 }
+
+
+.inspiration-cards article {
+  flex-basis: 300px;
+}
+
+.inspiration-cards h2 {
+  font-size: 24px;
+}
+
+.core-page .inspiration-cards img {
+  width: 100%;
+  height: 190px;
+  object-fit: contain;
+}
+
+.inspiration-cards article > p:last-of-type {
+  color: #535350;
+  font-size: 14px;
+}
+
+@media (max-width: 700px) {
+  .inspiration-cards {
+    flex-direction: column;
+  }
+
+  .inspiration-cards article {
+    flex: auto;
+  }
+}
