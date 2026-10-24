@@ -60,3 +60,35 @@ body {
   border: 0;
   border-top: 2px solid #34A853;
 }
+
+.about-biography {
+  flex: 1.4 1 0;
+}
+
+.about-video {
+  flex: 1 1 0;
+}
+
+.about-biography p {
+  max-width: 65ch;
+}
+
+
+@media (max-width: 800px) {
+  .about-layout {
+    flex-direction: column;
+  }
+
+  .about-biography,
+  .about-video {
+    flex: auto;
+    width: 100%;
+  }
+}
+
+@media (max-width: 420px) {
+  .about-biography,
+  .about-video {
+    padding: 18px;
+  }
+}
