@@ -98,3 +98,7 @@ body {
     flex: auto;
   }
 }
+.sketchbook-page .checkpoint-jump {
+  display: inline-block;
+  padding: 12px 0;
+}

@@ -717,3 +717,27 @@ body.core-page {
   margin: 0;
   border-radius: 12px;
 }
+
+/* Keep reflection paragraphs in a normal top-to-bottom reading order. */
+.sketchbook-page .process-entry {
+  display: block;
+}
+
+.sketchbook-page .process-entry > * + * {
+  margin-top: 20px;
+}
+
+.sketchbook-page .process-entry > p {
+  max-width: 75ch;
+}
+
+/* Stack comparison images on smaller screens. */
+@media (max-width: 600px) {
+  .sketchbook-page .revision-entry .image-comparison {
+    flex-direction: column;
+  }
+
+  .sketchbook-page .revision-entry .image-comparison figure {
+    width: 100%;
+  }
+}
