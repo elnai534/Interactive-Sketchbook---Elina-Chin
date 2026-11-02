@@ -136,3 +136,15 @@ hint: adjust the first two value only if they are negative values to begin with,
 .reflection p + p {
   margin-top: 1em;
 }
+
+.portfolio-nav a {
+  margin: 0;
+  background: transparent;
+  border: 0;
+  border-radius: 0;
+}
+
+.portfolio-nav a:hover {
+  background: transparent;
+  border: 0;
+}
