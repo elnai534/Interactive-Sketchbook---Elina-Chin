@@ -16,7 +16,7 @@
       <h1>Elina Chin</h1>
       <p>Interactive Sketchbook</p>
 
-      <a class="checkpoint-jump" href="#checkpoint-two-revisions">
+      <a class="checkpoint-jump" href="#lab-transform-the-night-sky">
         Latest revision ↓
       </a>
 
@@ -220,6 +220,34 @@
         <img
             src="../img/gitcommit.png"
             alt="Screen shot of Github commit for the checkpoint two revisions - changes made.">
+      </section>
+
+      <section
+        class="process-entry revision-entry"
+        id="lab-transform-the-night-sky"
+        >
+        <h2>11/01/2026 — Checkpoint Two: Transform the Night Sky</h2>
+        <p>
+          This assignment connected back to the positioning lab, but this time
+          I used scale, skew, translate, and rotate to change the stars when
+          hovering. I combined two transforms on each star, so one can grow
+          while turning and another can move while rotating. Both functions
+          need to be in the same transform declaration, otherwise the last
+          declaration replaces the earlier one.
+          I added transition-duration to the normal styles so the movement
+          happens gradually in both directions. I used different durations
+          for the stars and two seconds for the moon's shadow. I feel like
+          slowing the changes down makes the different effects easier to follow.
+          For the moon, I changed the negative shadow offsets to positive
+          values so the glow moves to the opposite side.
+          Absolute positioning takes the stars out of the normal layout, so
+          they do not push each other apart. Something I had to account for
+          was keeping them separate from the reflection. I added a relative
+          sky container so their percentage positions refer to that area.
+          I kept the movements small and adjusted the star sizes so there
+          is space around them. Going forwards, I could use these effects
+          for small interactions on my Sketchbook.
+        </p>
       </section>
 <br>
 
