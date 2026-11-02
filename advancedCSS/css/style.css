@@ -1,0 +1,181 @@
+/* ======================================
+   Global CSS Reset
+====================================== */
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  /* ====================================
+     base styles
+    ==================================*/
+
+body {
+  min-height: 100vh;
+  width: 100%;
+  color: white;
+  background-color: #333333;
+  font-family: "futura-pt", sans-serif;
+  font-weight: 400;
+  text-align: center;
+  position: relative;
+}
+
+.sections {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  border-bottom: 3px double white;
+}
+
+.row {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 95%;
+  margin: auto;
+}
+
+.columnOne {
+  text-align: start;
+  width: 50%;
+  margin-right: 2%;
+  margin-bottom: 2.5%;
+}
+
+.columnTwo {
+  text-align: start;
+  width: 50%;
+  margin-left: 2%;
+  margin-bottom: 2.5%;
+  padding: 3%;
+  border: 3px double #0000ff;
+  background-color: white;
+  color: black;
+}
+
+#columnTwo:hover {
+  color: #FFFFFF;
+  background-color:  #0000FF;;
+  cursor: crosshair;
+}
+
+
+/* =========== typography============= */
+
+h1 {
+  font-family: "futura-pt-bold", sans-serif;
+  font-weight: 700;
+  font-size: 4em;
+  text-transform: uppercase;
+  margin-top: 2.5%;
+  margin-bottom: 5%;
+}
+
+h2 {
+  text-transform: uppercase;
+  padding-bottom: 2.5%;
+  text-align: start;
+  margin-left: 10%;
+}
+
+h4 {
+  background-color: white;
+  color: #0000ff;
+  font-size: 2em;
+  border-top: 1px solid #0000ff;
+  border-bottom: 1px solid #0000ff;
+  padding: .5%;
+  padding-left: 10%;
+  margin-bottom: 5%;
+  text-align: start;
+}
+
+p {
+  font-size: 1.25em;
+  line-height: 1.25em;
+}
+
+#start {
+  position: fixed;
+  bottom: 0%;
+  right: 0%;
+}
+
+a {
+  font-size: 1.5em;
+  text-decoration: none;
+  text-transform: uppercase;
+  background-color: #0000FF;
+  margin: 2.5%;
+  padding: 2.5%;
+  letter-spacing: .15em;
+  color: white;
+  border: 1px solid white;
+  border-radius: 5px;
+  -webkit-border-radius:;
+  -moz-border-radius:;
+  -ms-border-radius:;
+  -o-border-radius:;
+}
+
+a:hover {
+  color: #0000FF;
+  border: 1px solid #0000FF;
+  background-color: white;
+}
+
+#start a:hover {
+  color: #0000FF;
+  border: 1px solid #0000FF;
+  background-color: white;
+}
+
+
+
+.button {
+  margin-top: 5%;
+  border: 1px solid black;
+  border-radius: 0%;
+  -webkit-border-radius: 0%;
+  -moz-border-radius: 0%;
+  -ms-border-radius: 0%;
+  -o-border-radius: 0%;
+}
+
+code {
+  background-color: white;
+  color: black;
+  padding: 1.5%;
+  /* border: 1px solid #0000ff; */
+}
+
+ul {
+  list-style: none;
+  margin-top: 1.5%;
+}
+
+li {
+  margin-bottom: 4%;
+}
+
+#buggy {
+  width: 25%;
+  left: 0%;
+  transition-duration: 4s;
+}
+
+#buggy:hover {
+  transform: rotate(-9000deg) scale(.25) ;
+  -webkit-transform: rotate(-9000deg) scale(.25) translate(2000px, 2000px);
+  -moz-transform: rotate(-9000deg) scale(.25) translate(1000px, 500px);
+  -ms-transform: rotate(-9000deg) scale(.25) translate(1000px, 500px);
+  -o-transform: rotate(-9000deg) scale(.25) translate(1000px, 500px);
+}
+
+
+
+
+

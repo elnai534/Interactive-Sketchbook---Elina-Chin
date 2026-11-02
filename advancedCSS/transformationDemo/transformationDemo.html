@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<link rel="stylesheet" href="https://use.typekit.net/xih6dhg.css">
+	<link rel="stylesheet" href="../css/style.css">
+	<link rel="stylesheet" href="css/transformationsDemo.css">
+
+	<title>Advanced CSS Part 1</title>
+</head>
+
+<!-- for this page, make sure you are on the transformationsDemo.css page - make all your edits there, do not use the style.css page -->
+
+
+<body>
+    <h1>Advanced CSS Part 1</h1>
+    <div class="sections">
+		<a href="../psuedoClasses/psuedoClasses.html">psuedo classes</a>
+		<a href="../transformations/transformations.html">transformations</a>
+        <a href="transformationDemo.html">transformations demo</a>
+        <a href="../homework/homework.html">transform the night sky - homework</a>
+	</div>
+	
+	<a id="start" href="../index.html">home</a>
+
+<h4>Transformations Demo - Bugs, Bugs and More Bugs</h4>
+
+<div class="bugRow">
+    <div class="bugSection">
+        <h3>Bug 1:</h3>
+        <h2>transform: rotate(deg);</h2>
+        <p>Rotate is measured in degrees. For forward rotation use positive numbers, for a reverse rotation use negative numbers. You can also rotate on a singular axis. Remember transform needs a trigger event like hover to work. so let's add a hover to bug 1 and make it move!</p>
+        <img class="bugOne" src="img/bugOne.svg">	
+    </div>
+
+    <div class="bugSection">
+        <h3>Bug 2:</h3>
+        <h2>transform: scale(factor);</h2>
+        <p>Scale can be applied to the entire element evenly or you can use two values, one for the height and one for the width. you can also use scaleX() and scaleY() for specificity.</p>
+        <img class="bugTwo" src="img/bugTwo.svg">
+    </div>
+
+    <div class="bugSection">
+        <h3>Bug 3:</h3>
+        <h2>transform: skew(deg, deg);</h2> <p>This property skews an element along the X and Y axis, therefore you need 2 values measured in degrees. </p>
+        <img class="bugThree" src="img/bugThree.svg">
+    </div>
+
+    <div class="bugSection">
+        <h3>Bug 4:</h3>
+        <h2>transform: translate(x, y);</h2>
+        <p>This property moves an element from its current position along the X and Y axis, (think relative positioning). There fore you need two values here. </p>
+        <img class="bugFour" src="img/bugFour.svg">
+    </div>	
+
+    <div class="bugSection">
+        <h3>Bug 5:</h3>
+        <h2>translate & scale</h2>
+        <p>in order to have multiple transforms, they must be written inline. if you seperate on multiple lines, only the one on the bottom will work. Let's add a translate and scale to bugFive</p>
+        <img class="bugFive" src="img/bugFive.svg">
+    </div>
+
+    <div class="bugSection">
+        <h3>Bug 6:</h3>
+        <h2>skew & rotate</h2>
+        <p>Let's add a skew & rotate to bugSix</p>
+        <img class="bugSix" src="img/bugSix.svg">
+    </div>
+
+    <div class="bugSection">
+        <h3>Bug 7:</h3>
+        <h2>smooth it out</h2>
+        <p>Okay, now we are getting the hand of it. Let's take a sneak peak at something called "transition-duration" and see how we can slow some of these movements down. First lets put a rotate on bugSeven of (900deg)</p>
+        <img class="bugSeven" src="img/bugOne.svg">	
+        <p> - well, it doesnt look like it spun around 900 degrees does it? so lets add this bit of code to our css page</p>
+        <code>
+            .bugSeven {<br>
+                transition-duration: 3s;
+           <br> }<br>
+        </code>
+        <p>and see what happens</p>
+    </div>
+
+    <div class="bugSection">
+        <h3>Bug 8:</h3>
+        <h2>dealer's choice</h2>
+        <img class="bugEight" src="img/bugTwo.svg">
+    </div>
+
+<!--Animate the last bug in the CSS and add additional bugs if you want to experiment more!-->  
+
+</body>
+</html>

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="css/homework.css">
+
+    <title>Tranform The Night Sky</title>
+
+
+</head>
+<body>
+
+    <div class="night-sky">
+	<div class="circle"></div>
+		<img id="starOne" src="img/starOne.svg">
+		<img id="starTwo" src="img/starTwo.svg">
+		<img id="starThree" src="img/starThree.svg">
+		<img id="starFour" src="img/starFour.svg">
+    </div>
+        <a id="start" href="../index.html">home</a>
+
+        <!-- directions for the homework are in the homework.css file -->
+
+
+    <section class="reflection">
+      <h2>Reflection</h2>
+      <p>
+        This assignment connected back to the positioning lab, but this time
+        I used scale, skew, translate, and rotate to change the stars when
+        hovering. I combined two transforms on each star, so one can grow
+        while turning and another can move while rotating. Both functions
+        need to be in the same transform declaration, otherwise the last
+        declaration replaces the earlier one.
+        I added transition-duration to the normal styles so the movement
+        happens gradually in both directions. I used different durations
+        for the stars and two seconds for the moon's shadow. I feel like
+        slowing the changes down makes the different effects easier to follow.
+        For the moon, I changed the negative shadow offsets to positive
+        values so the glow moves to the opposite side.
+        Absolute positioning takes the stars out of the normal layout, so
+        they do not push each other apart. Something I had to account for
+        was keeping them separate from the reflection. I added a relative
+        sky container so their percentage positions refer to that area.
+        I kept the movements small and adjusted the star sizes so there
+        is space around them. Going forwards, I could use these effects
+        for small interactions on my Sketchbook.
+      </p>
+    </section>
+
+</body>
+</html>
