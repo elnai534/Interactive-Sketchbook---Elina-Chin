@@ -5,9 +5,41 @@
     <!-- INSERT VIEWPORT CODE HERE -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/style.css">   
+    <link rel="stylesheet" href="../navigation/navigation.css">
+    <script src="../navigation/navigation.js" defer></script>
 </head>
 
 <body>
+  <header>
+      <nav class="portfolio-nav is-open">
+        <button class="portfolio-nav-toggle" type="button">Menu</button>
+
+        <ul class="portfolio-nav-links" id="portfolio-nav-links">
+          <li><a href="../index.html">Home</a></li>
+          <li><a href="../about/about.html">About</a></li>
+          <li><a href="../inspiration/inspiration.html">Inspiration</a></li>
+          <li><a href="../checkpointone/checkpoint_one.html">Sketchbook</a></li>
+
+          <li>
+            <details class="assignments-menu">
+              <summary>Assignments</summary>
+
+              <ul class="assignment-links">
+                <li><a href="../hierarchy/hierarchy.html">Hierarchy</a></li>
+                <li><a href="../css_practice/css_practice.html">CSS Practice</a></li>
+                <li><a href="../mid_century_modern_blog/index.html">Mid-Century Modern</a></li>
+                <li><a href="../box_model/box_model.html">Box Model</a></li>
+                <li><a href="../multi_column_lab/index.html">Multi-Column Lab</a></li>
+                <li><a href="../flexboxIRL/index.html">Three-Column Lab</a></li>
+                <li><a href="../positioningLab/index.html">Positioning Lab</a></li>
+                <li><a href="../advancedCSS/homework/homework.html">Transform the Night Sky</a></li>
+                <li><a href="index.html">Responsive Demo</a></li>
+              </ul>
+            </details>
+          </li>
+        </ul>
+      </nav>
+  </header>
 <div id="topPage">
     <img id="logo" src="img/logo.jpg" alt="blueberry logo">
     <h1 id="pagetitle">I want to be a responsive website</h1>
