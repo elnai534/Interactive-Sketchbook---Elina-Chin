@@ -1,0 +1,125 @@
+* {
+
+
+/* how do we reset our css again? what are the three things we need to call out here? */
+}
+
+body {
+
+  height: 760px;
+  /* set min-height to what? */
+  width: 1280px;
+  /* set width to what? */
+  background-color: lightblue;
+  /* margin: ?; */
+ }
+
+ #topPage {
+  /* display: ?; */
+  /* what else? */
+
+ 
+ }
+
+ #logo {
+  width: 200px;
+}
+
+#pagetitle {
+  background-color: rgb(0,0,255);
+  color: white;
+  text-align: center;
+  padding: 10px;
+}
+
+ h1 {
+  font-size: 52px;
+}
+
+h2 {
+  font-size: 48px;
+  text-align: center;
+}
+
+h3 {
+  font-size: 36px;
+}
+
+p {
+  font-size: 18px;
+}
+
+a {
+  color: chartreuse;
+} 
+
+.bodytext {
+  padding-left: 25px;
+}
+
+/* --------styles--------------- */
+
+.directions {
+  background-color: blueviolet;
+  color: aquamarine;
+  margin-top: 25px;
+  margin-bottom: 25px;
+  text-align: center;
+}
+
+#viewport {
+  background-color: rgb(200,255,100);
+  margin-top: 50px;
+  margin-bottom: 50px;
+}
+
+#viewportImage {
+  width: 720px;
+}
+
+#before, #after {
+  border: 1px solid black;
+}
+
+#beforeAfter {
+  background-color: chartreuse;
+  /* display: ?*/
+  /* what else */
+  /* width: ? */
+}
+
+#gifs {
+  background-color: coral;
+  /* display: ? */
+  /* what else */
+  /* what else */
+  width: 350px;
+  margin-bottom: 25px;
+
+
+}
+
+#leftgif, #centergif, #rightgif {
+  border: 1px solid black;
+
+}
+
+.gifsSize {
+  width: 325px;
+}
+
+.bodytext {
+
+  background-color: cyan;
+
+}
+
+#media {
+  background-color: hotpink;
+}  
+
+/* -------- media queries --------- */
+
+
+
+
