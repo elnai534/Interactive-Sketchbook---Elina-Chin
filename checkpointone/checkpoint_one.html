@@ -16,7 +16,7 @@
       <h1>Elina Chin</h1>
       <p>Interactive Sketchbook</p>
 
-      <a class="checkpoint-jump" href="#checkpoint-two-stepthree">
+      <a class="checkpoint-jump" href="#responsive-demo-lab">
         Latest revision ↓
       </a>
 
@@ -254,7 +254,7 @@
       class="process-entry revision-entry"
       id="checkpoint-two-stepthree"
     >
-      <h2>10/23/2026 — Checkpoint Two Step Three</h2>
+      <h2>11/01/2026 — Checkpoint Two Step Three</h2>
       <p>
         I chose to repeat the navigation and Assignments dropdown across my Point of Entry, About, Inspiration, and Checkpoint pages. As I added more exercises, the navigation started to feel crowded. I grouped them under Assignments so I could keep the main links easy to find without having every assignment visible all the time. I used fixed positioning to keep the navigation near the top while scrolling and translateX(-50%) to center it. I gave the Assignments container relative positioning and the dropdown absolute positioning so the menu opens below its label without moving the rest of the page. I also rotated a small square to create the dropdown’s pointer.
 I kept the same hover behavior across these pages. When I hover over the collapsed navigation, it expands, and when I hover over an assignment link, its background turns pale blue. I used transitions to slow down the expansion and fade in the links. The dropdown opens when I click Assignments; I applied the transitions to the surrounding navigation rather than the dropdown itself.
@@ -262,6 +262,19 @@ I had to work through the relative paths because my pages sit in different folde
 I feel like grouping the assignments worked well because I can find the main pages more easily. I kept each page’s layout, but the repeated navigation makes moving between them feel more connected. The movement gives feedback without becoming the main focus of the page.
       </section>
 <br>
+
+ <section
+      class="process-entry revision-entry"
+      id="responsive-demo-lab"
+    >
+      <h2>11/02/2026 — Responsive Demo Lab</h2>
+    <p>
+      I started with a layout that used a fixed body width of 1280px, which meant the page could extend beyond smaller screens. The images also had fixed widths, so they could not shrink with their containers. I changed these measurements to relative units so the page could adapt to the available space.
+      I found the image sizing the most straightforward part. Using `max-width: 100%` and `height: auto` lets the images shrink without stretching or losing their proportions. I also used Flexbox to place the title beside the logo and arrange the comparison images and GIFs side by side.
+      The more difficult part was handling the text alongside those images. Keeping everything in a row gives each section less room on smaller screens, and shrinking the text too much can make it difficult to read. At the 600px breakpoint, I set the viewport example image to full width and added the font-size reduction from the demo instructions. I still need to check how readable that makes the smaller text.
+      I now understand more clearly how Flexbox, relative units, and media queries work together. I use Flexbox to arrange the content, relative units to let it resize, and media queries to change specific styles when the screen reaches a certain width. I feel like making a page responsive takes more than making everything smaller; I also have to consider how much space the content needs.</p>
+    </section>
+ 
 
 
 

@@ -117,6 +117,13 @@
   <h2 class="directions">Here is a really good tutorial all about  <a href="https://css-tricks.com/a-complete-guide-to-css-media-queries/" target="_blank">Media Queries</a></h2>
 
   </div>
+  <div>
+    <p>
+      I started with a layout that used a fixed body width of 1280px, which meant the page could extend beyond smaller screens. The images also had fixed widths, so they could not shrink with their containers. I changed these measurements to relative units so the page could adapt to the available space.
+      I found the image sizing the most straightforward part. Using `max-width: 100%` and `height: auto` lets the images shrink without stretching or losing their proportions. I also used Flexbox to place the title beside the logo and arrange the comparison images and GIFs side by side.
+      The more difficult part was handling the text alongside those images. Keeping everything in a row gives each section less room on smaller screens, and shrinking the text too much can make it difficult to read. At the 600px breakpoint, I set the viewport example image to full width and added the font-size reduction from the demo instructions. I still need to check how readable that makes the smaller text.
+      I now understand more clearly how Flexbox, relative units, and media queries work together. I use Flexbox to arrange the content, relative units to let it resize, and media queries to change specific styles when the screen reaches a certain width. I feel like making a page responsive takes more than making everything smaller; I also have to consider how much space the content needs.</p>
+  </div>
 
 </body>
 </html>
