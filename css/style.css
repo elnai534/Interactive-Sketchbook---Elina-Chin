@@ -1,3 +1,14 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  min-height: 100vh;
+  width: 100%;
+}
+
 body {
   margin: 0;
   background-color: #faf9f5;
@@ -620,14 +631,14 @@ body.core-page {
   border-radius: 10px;
 }
 
-/* Screenshots directly inside an entry should not grow. */
+/* imgs directly inside an entry do not grow. */
 .sketchbook-page .process-entry > img {
   flex: 0 1 320px;
   min-width: 0;
   align-self: flex-start;
 }
 
-/* Screenshots inside paragraphs also stay compact. */
+/* imgs inside paragraphs compact. */
 .sketchbook-page .process-entry p img {
   display: block;
   margin-top: 16px;
@@ -716,4 +727,84 @@ body.core-page {
   max-height: none;
   margin: 0;
   border-radius: 12px;
+}
+/* wrap long words so they don't spill off the page */
+.home-page {
+  overflow-wrap: anywhere;
+}
+
+/*  shrink intro text - depending on layout */
+.home-page .home-intro p {
+  min-width: 0;
+}
+
+/* wrap greeting onto next line */
+.home-page .home-greeting > span {
+  white-space: normal;
+}
+
+/* starts buttons at 90px and lets them grow or shrink to fit */
+.home-page .home-process .process-options button {
+  flex: 1 1 90px;
+}
+
+/* adjusts the layout when the screen hits <800px */
+@media (max-width: 800px) {
+  /* card layout */
+  .home-page .home-grid > .home-card {
+    flex: 1 1 calc((100% - 18px) / 2);
+  }
+
+  /* process card on own row */
+  .home-page .home-grid > .home-process {
+    flex-basis: 100%;
+  }
+
+  /* keeps the open menu within the screen and lets it scroll */
+  .home-page .portfolio-nav.is-open {
+    max-height: calc(100dvh - 32px); /* dependency: screen height */
+    overflow-y: auto;
+    border-radius: 28px; /* corner radius */
+  }
+
+  /* shuffle: last menu item onto own row */
+  .home-page .portfolio-nav-links > li:last-child {
+    flex-basis: 100%;
+  }
+
+  /* center: dropdown label */
+  .home-page .portfolio-nav summary {
+    text-align: center;
+  }
+
+  /* layout: dependency: screen width - assignment links */
+  .home-page .portfolio-nav .assignment-links {
+    position: static;
+    width: 100%;
+    max-width: 100%;
+    margin-top: 8px;
+  }
+
+  .home-page .portfolio-nav .assignment-links::before {
+    display: none;
+  }
+}
+
+/* layout: screens <560px */
+@media (max-width: 560px) {
+  /* stacks cards vertically */
+  .home-page .home-grid {
+    flex-direction: column;
+  }
+
+  /* card full width auto height adjust */
+  .home-page .home-grid > .home-card {
+    flex: auto;
+    width: 100%;
+  }
+
+  /* intro text size from its content and available space */
+  .home-page .home-intro p {
+    flex: auto;
+  }
 }
