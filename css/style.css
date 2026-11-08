@@ -807,4 +807,24 @@ body.core-page {
   .home-page .home-intro p {
     flex: auto;
   }
+  /* keeps all three screenshots in one row */
+  .process-entry.revision-entry .responsive-screenshots {
+    display: flex !important;
+    flex-direction: row !important;
+    flex-wrap: nowrap !important;
+    align-items: flex-start;
+    gap: 20px;
+    width: 100%;
+  }
+
+  /* makes each screenshot fit its share without stretching */
+  .process-entry.revision-entry .responsive-screenshots > img {
+    flex: 0 1 calc((100% - 40px) / 3) !important;
+    width: calc((100% - 40px) / 3) !important;
+    min-width: 0 !important;
+    max-width: 100% !important;
+    height: auto !important;
+    margin: 0 !important;
+    object-fit: contain;
+  }
 }

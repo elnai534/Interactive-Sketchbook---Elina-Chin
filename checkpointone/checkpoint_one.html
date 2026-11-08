@@ -274,7 +274,71 @@ I feel like grouping the assignments worked well because I can find the main pag
       The more difficult part was handling the text alongside those images. Keeping everything in a row gives each section less room on smaller screens, and shrinking the text too much can make it difficult to read. At the 600px breakpoint, I set the viewport example image to full width and added the font-size reduction from the demo instructions. I still need to check how readable that makes the smaller text.
       I now understand more clearly how Flexbox, relative units, and media queries work together. I use Flexbox to arrange the content, relative units to let it resize, and media queries to change specific styles when the screen reaches a certain width. I feel like making a page responsive takes more than making everything smaller; I also have to consider how much space the content needs.</p>
     </section>
- 
+
+<style>
+  /* puts the screenshots in one row */
+.process-entry.revision-entry .responsive-screenshots {
+  display: flex !important;
+  flex-direction: row !important;
+  flex-wrap: nowrap !important;
+  justify-content: flex-start !important;
+  align-items: flex-start;
+  gap: 20px;
+  width: 100%;
+  overflow-x: auto;
+}
+
+/* gives them the same height while keeping their original proportions */
+.process-entry.revision-entry .responsive-screenshots > img {
+  display: block;
+  flex: 0 0 auto !important;
+  width: auto !important;
+  height: 300px !important;
+  min-width: 0 !important;
+  max-width: none !important;
+  max-height: none !important;
+  margin: 0 !important;
+  padding: 0 !important;
+}
+</style>
+ <section class="process-entry revision-entry">
+  <h2>11/07/2026 — Responsive Point of Entry</h2>
+
+  <p>
+    I updated my landing page so the layout adjusts as the browser becomes
+    narrower. I kept the existing design and navigation behavior and focused
+    on giving the content enough room to stay readable. I chose 800px and
+    560px as my main breakpoints.I chose these widths to give the headings
+    and paragraphs more space. While reviewing the CSS, I noticed that an existing
+    rule used grid-template-columns even though the card container used Flexbox, so I added flex-basis
+    rules to control the widths. I also changed the introduction paragraph
+    to flex: auto on smaller screens so its previous 240px flex basis
+    would not create unnecessary height. The screenshots below document
+    the page at different widths. In the narrow previews, the cards stack
+    and the text wraps within them. I also noticed that the floating Menu
+    can cover content while scrolling. I kept its behavior for this
+    revision, but that overlap and the extra vertical spacing still need
+    attention. This helped me understand that making a page responsive
+    involves checking how the content fits and reads, rather than only
+    making everything smaller. I feel like the page is now more adaptable and user-friendly, even 
+    though there are still areas that need improvement.
+  </p>
+
+  <div class="responsive-screenshots">
+  <img
+    src="../img/indexAfterpad.png"
+    alt="Responsive landing page at pad width"
+  >
+<img
+    src="../img/indexAftertab.png"
+    alt="Responsive landing page at tablet width"
+  >
+  <img
+    src="../img/indexAfterphone.png"
+    alt="Responsive landing page at phone width"
+  >
+</div>
+</section>
 
 
 
