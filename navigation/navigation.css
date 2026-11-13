@@ -1,18 +1,12 @@
 /* Shared portfolio navigation. Keep this after the page's own stylesheet. */
-html { scroll-padding-top: 180px; }
-body { padding-top: 104px; }
 .portfolio-nav,
 .portfolio-nav * { box-sizing: border-box; }
 .portfolio-nav {
-  position: fixed;
-  top: 16px;
-  left: 50%;
-  transform: translateX(-50%);
-  z-index: 1000;
+  position: relative;
   width: 180px;
   max-width: calc(100% - 32px);
   min-height: 64px;
-  margin: 0;
+  margin: 16px auto 0;
   padding: 0;
   border: 1px solid white;
   border-radius: 999px;
@@ -61,9 +55,6 @@ body { padding-top: 104px; }
   cursor: pointer;
 }
 .portfolio-nav.is-open .portfolio-nav-toggle { display: none; }
-@media (max-width: 1000px) {
-  body { padding-top: 184px; }
-}
 @media (max-width: 600px) {
   .portfolio-nav { width: 120px; font-size: 16px; }
   .portfolio-nav.is-open { border-radius: 28px; }
